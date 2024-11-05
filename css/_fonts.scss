@@ -1,0 +1,43 @@
+// import des fonts
+@import '_variables.scss';
+
+.fontTitle{
+    font-family: $titleFont;
+    color: $colorWhite;
+    font-size: 4rem;
+}
+.fontButton{
+    font-family: $titleButton;
+    color: $colorWhite;
+    font-size: 1rem;
+}
+.fontList{
+    font-family: $titleh2;
+    color: $colorWhite;
+}
+.fontSubTitle{
+    font-family: $titleh2;
+    color: $colorGreen;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+.fontText{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    color: $colorWhite;
+    font-size: 16px;
+}
+.fontText2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    color: $colorWhite;
+    font-size: 12px;
+}
+.fontSubSubTitle{
+    font-family: $titleh2;
+    color: $colorWhite;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 1rem;
+}

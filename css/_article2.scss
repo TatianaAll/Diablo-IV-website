@@ -1,0 +1,22 @@
+main {
+  #mercenaires {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0)
+      ),
+      url("../img/laTeamdeLaSection2.png");
+    background-size: contain;
+    background-position: left 100% bottom 10%;
+    background-repeat: no-repeat;
+    @include paddingArticle;
+    h3 {
+      margin: 2rem 2rem;
+      padding-top: 2rem;
+    }
+    p {
+      @include paragraph;
+      padding: 0 3rem 8rem 4rem;
+    }
+  }
+}

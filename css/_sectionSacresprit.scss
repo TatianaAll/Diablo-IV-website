@@ -1,0 +1,55 @@
+#sacresprit {
+  display: flex;
+  position: relative;
+  background-image: url(../img/madameVerteGrande.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  > div{
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: 50%;
+    h2 {
+      @include paddingArticle;
+    }
+    > .spirits {
+      display: flex;
+      > div:first-child {
+        width: 25%;
+        padding: 0 2rem;
+        margin-bottom: 1rem;
+        transform: scale(1);
+        transition: all 1s;
+      }
+      > div:last-child {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        > h4 {
+          position: absolute;
+          top: 20%;
+          right: 40%;
+          transition: all 2s;
+        }
+        > p {
+          width: 70%;
+          margin: 3rem 0 0 1.5rem;
+          opacity: 0;
+          transition: opacity 2s;
+        }
+      }
+      &:hover > div:last-child > p {
+        opacity: 1;
+      }
+      &:hover > div:last-child > h4 {
+        transform: translateY(-100%);
+      }
+      &:hover > div:first-child{
+          transform: scale(1.5);
+      }
+    }
+
+  }
+}

@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import '_variables.scss';
+
+@import '_header.scss';
+
+@import '_fonts.scss';
+
+@import '_article1.scss';
+
+@import '_pub.scss';
+
+@import '_article2.scss';
+
+@import '_sectionSacresprit.scss';
+
+@import '_gameplay.scss';
+
+@import '_seasonPass.scss';
+
+@import '_footer.scss';
+
+.w100{
+    width: 100%;
+}
+.isFlex{
+    display: flex;
+}
+.isRelative{
+    position: relative;
+}
+
+// background color
+body{
+    background-color: $colorBlack
+}
+a{
+    text-decoration: none;
+}

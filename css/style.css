@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "bildad";
+  src: url(../fonts/Bildad.ttf);
+}
+@font-face {
+  font-family: "diablo light";
+  src: url(../fonts/Diablo\ Light.ttf);
+}
+@font-face {
+  font-family: "diablo";
+  src: url(../fonts/diablo.ttf);
+}
+@keyframes crossHamburger1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes crossHamburger2 {
+  from {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  to {
+    transform: rotate(45deg) translate(-15px, -15px);
+  }
+}
+@keyframes disapear {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+@keyframes slideMenu {
+  from {
+    transform: translate(100%, -50%);
+  }
+  to {
+    transform: translate(0%, -50%);
+  }
+}
+header {
+  background-image: url(../img/madameVerteHorizontale.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+header #logoHeader {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translate(0%, -50%);
+  width: 30%;
+  z-index: 1000;
+}
+header #hamburgerMenu {
+  width: 70px;
+  height: 70px;
+  padding-top: 2px;
+  position: absolute;
+  top: 5%;
+  left: 85%;
+}
+header #hamburgerMenu > li {
+  padding: 1px;
+  background-color: white;
+  margin: 10px;
+  transition: all 1s;
+}
+header #hamburgerMenu + #navBar {
+  background-color: black;
+  position: absolute;
+  top: 15%;
+  left: 100%;
+  transition: transform 1.5s;
+  z-index: 1000;
+  width: 25%;
+}
+header #hamburgerMenu + #navBar > ul li {
+  width: 60%;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+}
+header #hamburgerMenu + #navBar > ul li > ul {
+  margin: 1rem;
+}
+header #hamburgerMenu + #navBar > ul li > ul > li {
+  width: 40%;
+  padding: 0 0 0 0.7rem;
+  position: relative;
+}
+header #hamburgerMenu + #navBar > ul li > ul > li::after {
+  content: " ";
+  display: block;
+  height: 1%;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  top: -70%;
+  left: 6px;
+}
+header #hamburgerMenu:hover #cross1 {
+  transform: rotate(-45deg);
+}
+header #hamburgerMenu:hover li:nth-child(2) {
+  opacity: 0%;
+}
+header #hamburgerMenu:hover #cross2 {
+  transform: rotate(45deg) translate(-15px, -15px);
+}
+header #hamburgerMenu:hover + nav {
+  transform: translate(-100%, 0%);
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "bildad";
+  src: url(../fonts/Bildad.ttf);
+}
+@font-face {
+  font-family: "diablo light";
+  src: url(../fonts/Diablo\ Light.ttf);
+}
+@font-face {
+  font-family: "diablo";
+  src: url(../fonts/diablo.ttf);
+}
+.fontTitle {
+  font-family: "diablo", sans-serif;
+  color: white;
+  font-size: 4rem;
+}
+
+.fontButton {
+  font-family: "bildad", sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+
+.fontList {
+  font-family: "diablo light", sans-serif;
+  color: white;
+}
+
+.fontSubTitle {
+  font-family: "diablo light", sans-serif;
+  color: #63d006;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.fontText {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 16px;
+}
+
+.fontText2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 12px;
+}
+
+.fontSubSubTitle {
+  font-family: "diablo light", sans-serif;
+  color: white;
+  font-weight: 200;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+main #nouveautes {
+  background-image: url(../img/petitChien.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2rem 2rem;
+}
+main h2 {
+  margin-bottom: 2rem;
+}
+main h3 {
+  margin: 2rem 0;
+}
+main #nouveautes > p {
+  width: 40%;
+  padding-bottom: 3rem;
+  line-height: 2em;
+}
+
+.adSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.adSection div:first-child {
+  width: 10%;
+}
+.adSection div:nth-child(2) {
+  background-color: #63d006;
+  padding: 0.7rem;
+  border-radius: 8vmax;
+}
+.adSection div:nth-child(2) a {
+  font-size: 18px;
+}
+.adSection div:nth-child(2):hover {
+  background-color: black;
+}
+.adSection div:nth-child(2):hover a {
+  color: #63d006;
+}
+
+main #mercenaires {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url("../img/laTeamdeLaSection2.png");
+  background-size: contain;
+  background-position: left 100% bottom 10%;
+  background-repeat: no-repeat;
+  padding: 2rem 2rem;
+}
+main #mercenaires h3 {
+  margin: 2rem 2rem;
+  padding-top: 2rem;
+}
+main #mercenaires p {
+  width: 40%;
+  padding-bottom: 3rem;
+  line-height: 2em;
+  padding: 0 3rem 8rem 4rem;
+}
+
+#sacresprit {
+  display: flex;
+  position: relative;
+  background-image: url(../img/madameVerteGrande.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+#sacresprit > div {
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 50%;
+}
+#sacresprit > div h2 {
+  padding: 2rem 2rem;
+}
+#sacresprit > div > .spirits {
+  display: flex;
+}
+#sacresprit > div > .spirits > div:first-child {
+  width: 25%;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  transform: scale(1);
+  transition: all 1s;
+}
+#sacresprit > div > .spirits > div:last-child {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#sacresprit > div > .spirits > div:last-child > h4 {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  transition: all 2s;
+}
+#sacresprit > div > .spirits > div:last-child > p {
+  width: 70%;
+  margin: 3rem 0 0 1.5rem;
+  opacity: 0;
+  transition: opacity 2s;
+}
+#sacresprit > div > .spirits:hover > div:last-child > p {
+  opacity: 1;
+}
+#sacresprit > div > .spirits:hover > div:last-child > h4 {
+  transform: translateY(-100%);
+}
+#sacresprit > div > .spirits:hover > div:first-child {
+  transform: scale(1.5);
+}
+
+#gameplay {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#gameplay h2 {
+  text-align: center;
+}
+#gameplay > article {
+  width: 45%;
+  padding-bottom: 2rem;
+}
+#gameplay > article > iframe {
+  border-radius: 5vmax;
+}
+#gameplay > article > h4 {
+  margin-bottom: 2rem;
+}
+#gameplay > article > p {
+  margin-bottom: 2rem;
+}
+
+#seasonPass {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-template-rows: 15% repeat(2, 1fr);
+}
+#seasonPass h2 {
+  text-align: center;
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+#seasonPass > div {
+  position: relative;
+  overflow: hidden;
+}
+#seasonPass #leftGrid {
+  grid-row: 2/4;
+  grid-column: 1/2;
+}
+#seasonPass #leftGrid img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#seasonPass #topRowGrid {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+#seasonPass #bottomRowGrid {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+#seasonPass div > div.fontButton {
+  font-size: 28px;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(99, 208, 6, 0.4);
+  width: 100%;
+  height: 100%;
+  padding-top: 25%;
+  transition: transform 1s;
+}
+#seasonPass #leftGrid > div.fontButton {
+  padding-top: 50%;
+}
+#seasonPass div:hover > div.fontButton {
+  transform: translateY(-100%);
+}
+
+footer {
+  background-image: linear-gradient(to top, #63d006, black, black);
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+footer > div:first-child {
+  width: 10%;
+  margin-left: 2rem;
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 25%;
+}
+footer ul > li.fontButton {
+  width: 100%;
+  text-align: center;
+}
+footer ul li {
+  width: 10%;
+}
+footer > div:last-child {
+  width: 15%;
+  background-color: #63d006;
+  padding: 0.7rem;
+  border-radius: 8vmax;
+  text-align: center;
+  padding-top: 1.3rem;
+}
+footer > div:last-child a {
+  font-size: 16px;
+}
+footer > div:last-child:hover {
+  background-color: black;
+}
+footer > div:last-child:hover a {
+  color: #63d006;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.isFlex {
+  display: flex;
+}
+
+.isRelative {
+  position: relative;
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

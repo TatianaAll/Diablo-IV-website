@@ -1,0 +1,52 @@
+// fonts
+@font-face {
+  font-family: "bildad";
+  src: url(../fonts/Bildad.ttf);
+}
+
+@font-face {
+  font-family: "diablo light";
+  src: url(../fonts/Diablo\ Light.ttf);
+}
+
+@font-face {
+  font-family: "diablo";
+  src: url(../fonts/diablo.ttf);
+}
+
+$titleFont: "diablo", sans-serif;
+$titleh2: "diablo light", sans-serif;
+$titleButton: "bildad", sans-serif;
+
+// colors
+$colorWhite: white;
+$colorGreen: #63d006;
+$colorBlack: black;
+
+// mix in: Mixins allow you to define styles that can be re-used throughout your stylesheet.
+@mixin paragraph {
+  width: 40%;
+  padding-bottom: 3rem;
+  line-height: 2em;
+}
+
+@mixin paddingArticle {
+  padding: 2rem 2rem;
+}
+
+@mixin textSeasonPass {
+  font-size: 28px;
+  text-align: center;
+}
+@mixin hiddenContent {
+  overflow: hidden;
+}
+@mixin isRelative {
+  position: relative;
+}
+
+@mixin adButton {
+  background-color: $colorGreen;
+  padding: 0.7rem;
+  border-radius: 8vmax;
+}

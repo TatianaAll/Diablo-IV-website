@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "bildad";
+  src: url(../fonts/Bildad.ttf);
+}
+@font-face {
+  font-family: "diablo light";
+  src: url(../fonts/Diablo\ Light.ttf);
+}
+@font-face {
+  font-family: "diablo";
+  src: url(../fonts/diablo.ttf);
+}
+.fontTitle {
+  font-family: "diablo", sans-serif;
+  color: white;
+  font-size: 4rem;
+}
+
+.fontButton {
+  font-family: "bildad", sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+
+.fontList {
+  font-family: "diablo light", sans-serif;
+  color: white;
+}/*# sourceMappingURL=fonts.css.map */

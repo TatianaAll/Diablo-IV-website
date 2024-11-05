@@ -1,0 +1,96 @@
+@import "_animation.scss";
+
+header {
+  background-image: url(../img/madameVerteHorizontale.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  @include hiddenContent;
+  // overflow hidden pour cacher ma nav bar quand elle est pas cliqué
+
+  #logoHeader {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translate(0%, -50%);
+    width: 30%;
+    z-index: 1000;
+  }
+
+  #hamburgerMenu {
+    width: 70px;
+    height: 70px;
+    padding-top: 2px;
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    > li {
+      padding: 1px;
+      background-color: $colorWhite;
+      margin: 10px;
+      transition: all 1s;
+    }
+
+    + #navBar {
+      background-color: $colorBlack;
+      position: absolute;
+      top: 15%;
+      left: 100%;
+      // transform: translate(0%, -50%);
+      transition: transform 1.5s;
+      z-index: 1000;
+      width: 25%;
+
+      > ul {
+        li {
+          width: 60%;
+          margin: 1rem 0;
+          font-size: 1.5rem;
+          padding: 0.5rem 2rem;
+          > ul {
+            margin: 1rem;
+            > li {
+              width: 40%;
+              padding: 0 0 0 0.7rem;
+              position: relative;
+
+              // creation du pseudo-élément trait
+              &::after {
+                content: " ";
+                display: block;
+                height: 1%;
+                background-color: $colorWhite;
+                width: 100%;
+                position: absolute;
+                top: -70%;
+                left: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // preparation des hover
+    &:hover {
+      #cross1 {
+        transform: rotate(-45deg);
+      }
+      li:nth-child(2) {
+        opacity: 0%;
+      }
+      #cross2 {
+        transform: rotate(45deg) translate(-15px, -15px);
+      }
+    }
+    &:hover + nav {
+      transform: translate(-100%, 0%);
+    }
+  }
+
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,32 @@
+@keyframes crossHamburger1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes crossHamburger2 {
+  from {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  to {
+    transform: rotate(45deg) translate(-15px, -15px);
+  }
+}
+@keyframes disapear {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+@keyframes slideMenu {
+    from{
+        transform: translate(100%, -50%);
+    }
+    to{
+        transform: translate(0%, -50%);
+    }
+}
